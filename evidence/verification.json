@@ -1,0 +1,158 @@
+{
+  "mode": "local-duckdb-fixture-extraction",
+  "commands": [
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "prepare",
+        "--manifest",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\inputs\\manifest.json",
+        "--output",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first",
+        "--fixture-extraction"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cloud_extraction\": false, \"load_time\": \"2026-10-27T23:26:06.659324+00:00\", \"manifest_sha256\": \"d31c96d17a3aa5141642624a1df4fa01dd85c31562a0ceb7734fe670c6bb5e48\", \"raw_sha256\": \"2956c4f72ca4b901ee072964332d1c1c5a55cf5b97f509a8a85298a26951d982\", \"rejects\": 0, \"rows\": 80, \"schema_version\": 1, \"sources\": [{\"input_rows\": 20, \"path\": \"supplier-a.csv\", \"sha256\": \"2a824bf45d25e47f6bd8a6b0cf8ffaec46a898ec4d7f57155665bc32463df133\", \"source\": \"supplier-a\"}, {\"input_rows\": 20, \"path\": \"supplier-1.json\", \"sha256\": \"e1366513f91ddd62c374cba5317e170590ea0fbec24915f45c41d3d777e781f0\", \"source\": \"supplier-1\"}, {\"input_rows\": 20, \"path\": \"supplier-2.json\", \"sha256\": \"546119acb559e3eb6ac1b8cee1302f70e1a85ff70977c96d6bb12fedc4357b87\", \"source\": \"supplier-2\"}, {\"extraction\": \"fixture\", \"input_rows\": 20, \"path\": \"invoice.txt\", \"response_sha256\": \"977c0454b160e8b1ac5a878e114c3fef77c1d7b6904875f76f62e60d1051fdc6\", \"sha256\": \"ad30c144aee096ddc8e8602e75159b3a11bb46a9839a9b8066cbe25d4dad021d\", \"source\": \"document-d\"}]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "build",
+        "--run-dir",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first"
+      ],
+      "returncode": 0,
+      "stdout": "{\"full_refresh\": false, \"mode\": \"local-duckdb\", \"models\": 12, \"nodes\": 51, \"run_results_sha256\": \"28c0d5f8cdc1546738ef4ca2eb97cf1a41107b708eba8f2efce291fa31ffb716\", \"tests\": 39}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "doctor",
+        "--run-dir",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first"
+      ],
+      "returncode": 0,
+      "stdout": "{\"build\": {\"full_refresh\": false, \"mode\": \"local-duckdb\", \"models\": 12, \"nodes\": 51, \"run_results_sha256\": \"28c0d5f8cdc1546738ef4ca2eb97cf1a41107b708eba8f2efce291fa31ffb716\", \"tests\": 39}, \"currencies\": 2, \"lines\": 80, \"raw_revisions\": 80, \"spend_by_currency_cents\": {\"EUR\": 12620, \"USD\": 13820}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "prepare",
+        "--manifest",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\inputs\\manifest.json",
+        "--output",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\second",
+        "--fixture-extraction"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cloud_extraction\": false, \"load_time\": \"2026-10-27T23:26:11.107734+00:00\", \"manifest_sha256\": \"d31c96d17a3aa5141642624a1df4fa01dd85c31562a0ceb7734fe670c6bb5e48\", \"raw_sha256\": \"7f95601678e6b4351de9104143a185b36206a3665f597481ea67fd3a87a3750f\", \"rejects\": 0, \"rows\": 80, \"schema_version\": 1, \"sources\": [{\"input_rows\": 20, \"path\": \"supplier-a.csv\", \"sha256\": \"2a824bf45d25e47f6bd8a6b0cf8ffaec46a898ec4d7f57155665bc32463df133\", \"source\": \"supplier-a\"}, {\"input_rows\": 20, \"path\": \"supplier-1.json\", \"sha256\": \"7d28f6c7ee447d80cf2211434c5e7f8daf39a13401721a1e5da4c4cc18c77eeb\", \"source\": \"supplier-1\"}, {\"input_rows\": 20, \"path\": \"supplier-2.json\", \"sha256\": \"546119acb559e3eb6ac1b8cee1302f70e1a85ff70977c96d6bb12fedc4357b87\", \"source\": \"supplier-2\"}, {\"extraction\": \"fixture\", \"input_rows\": 20, \"path\": \"invoice.txt\", \"response_sha256\": \"977c0454b160e8b1ac5a878e114c3fef77c1d7b6904875f76f62e60d1051fdc6\", \"sha256\": \"ad30c144aee096ddc8e8602e75159b3a11bb46a9839a9b8066cbe25d4dad021d\", \"source\": \"document-d\"}]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "build",
+        "--run-dir",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\second",
+        "--database",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first\\warehouse.duckdb"
+      ],
+      "returncode": 0,
+      "stdout": "{\"full_refresh\": false, \"mode\": \"local-duckdb\", \"models\": 12, \"nodes\": 51, \"run_results_sha256\": \"6a6b628373edf5e948701290000e89a0fc5f183630a65d899a8350d226784c5d\", \"tests\": 39}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "doctor",
+        "--run-dir",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\second",
+        "--database",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first\\warehouse.duckdb"
+      ],
+      "returncode": 0,
+      "stdout": "{\"build\": {\"full_refresh\": false, \"mode\": \"local-duckdb\", \"models\": 12, \"nodes\": 51, \"run_results_sha256\": \"6a6b628373edf5e948701290000e89a0fc5f183630a65d899a8350d226784c5d\", \"tests\": 39}, \"currencies\": 2, \"lines\": 79, \"raw_revisions\": 82, \"spend_by_currency_cents\": {\"EUR\": 12618, \"USD\": 13820}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "build",
+        "--run-dir",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\second",
+        "--database",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first\\warehouse.duckdb"
+      ],
+      "returncode": 0,
+      "stdout": "{\"full_refresh\": false, \"mode\": \"local-duckdb\", \"models\": 12, \"nodes\": 51, \"run_results_sha256\": \"b1c51836b4950db82c685219e944e2509672adf6fa614c014452cb2fe50a650b\", \"tests\": 39}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "warehouse",
+        "doctor",
+        "--run-dir",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\second",
+        "--database",
+        "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl\\first\\warehouse.duckdb"
+      ],
+      "returncode": 0,
+      "stdout": "{\"build\": {\"full_refresh\": false, \"mode\": \"local-duckdb\", \"models\": 12, \"nodes\": 51, \"run_results_sha256\": \"b1c51836b4950db82c685219e944e2509672adf6fa614c014452cb2fe50a650b\", \"tests\": 39}, \"currencies\": 2, \"lines\": 79, \"raw_revisions\": 82, \"spend_by_currency_cents\": {\"EUR\": 12618, \"USD\": 13820}}\n",
+      "stderr": ""
+    }
+  ],
+  "initial": {
+    "build": {
+      "full_refresh": false,
+      "mode": "local-duckdb",
+      "models": 12,
+      "nodes": 51,
+      "run_results_sha256": "28c0d5f8cdc1546738ef4ca2eb97cf1a41107b708eba8f2efce291fa31ffb716",
+      "tests": 39
+    },
+    "currencies": 2,
+    "lines": 80,
+    "raw_revisions": 80,
+    "spend_by_currency_cents": {
+      "EUR": 12620,
+      "USD": 13820
+    }
+  },
+  "updated": {
+    "build": {
+      "full_refresh": false,
+      "mode": "local-duckdb",
+      "models": 12,
+      "nodes": 51,
+      "run_results_sha256": "6a6b628373edf5e948701290000e89a0fc5f183630a65d899a8350d226784c5d",
+      "tests": 39
+    },
+    "currencies": 2,
+    "lines": 79,
+    "raw_revisions": 82,
+    "spend_by_currency_cents": {
+      "EUR": 12618,
+      "USD": 13820
+    }
+  },
+  "assertions": [
+    "80 rows and currency totals",
+    "12 models and 39 integrity tests",
+    "revision update",
+    "tombstone delete",
+    "idempotent replay"
+  ],
+  "scratch": "C:\\Users\\steve\\AppData\\Local\\Temp\\document-warehouse-bkplvovl",
+  "cleanup": true
+}

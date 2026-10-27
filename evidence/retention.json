@@ -1,0 +1,169 @@
+{
+  "current_dbt_receipts": [
+    {
+      "file": "evidence\\dbt-1000-0-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-0-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-1-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-1-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-2-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-2-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-3-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-3-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-4-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-1000-4-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-0-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-0-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-1-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-1-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-2-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-2-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-3-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-3-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-4-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\dbt-10000-4-incremental.json",
+      "matches_recorded_hash": true
+    }
+  ],
+  "older_dbt_receipts": [
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-0-full.json",
+      "matches_recorded_hash": false
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-0-incremental.json",
+      "matches_recorded_hash": false
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-1-incremental.json",
+      "matches_recorded_hash": false
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-1-full.json",
+      "matches_recorded_hash": false
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-2-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-2-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-3-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-3-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-4-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-1000-4-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-0-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-0-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-1-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-1-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-2-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-2-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-3-incremental.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-3-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-4-full.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "file": "evidence\\before-review-dbt\\dbt-10000-4-incremental.json",
+      "matches_recorded_hash": true
+    }
+  ],
+  "older_campaign_raw_summary_preserved": true,
+  "note": "The earlier campaign's timing/count/oracle summary is complete. Some earlier per-node dbt receipts were overwritten by the refresh before the copy was made. The refreshed campaign retains all 20 matching per-node receipts. The maintained driver now creates a unique artifact directory for every future campaign.",
+  "recorded_harness_sha256": "c69f113ceaf7da99816dca2a461155da6af7f02da7e7aab6a2ac0f628430e765"
+}

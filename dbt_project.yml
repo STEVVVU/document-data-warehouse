@@ -1,0 +1,15 @@
+name: purchases
+version: '1.0'
+config-version: 2
+profile: purchases
+model-paths: [models]
+test-paths: [data_tests]
+models:
+  purchases:
+    +materialized: table
+    staging:
+      +schema: staging
+    intermediate:
+      +schema: intermediate
+    marts:
+      +schema: marts

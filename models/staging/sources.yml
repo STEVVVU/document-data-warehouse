@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: raw
+    schema: "{{ var('raw_schema', 'raw') }}"
+    database: "{{ var('raw_database', target.database) }}"
+    tables:
+      - name: raw_lines

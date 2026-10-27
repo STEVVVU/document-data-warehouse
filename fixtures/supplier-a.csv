@@ -1,0 +1,21 @@
+line_id,invoice_id,supplier_id,supplier_name,invoice_date,sku,description,category,country,currency,quantity,unit_price_cents,revision,deleted
+line-0,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-0,Component 0,Hardware,US,EUR,1,100,1,False
+line-1,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-1,Component 1,Office,US,EUR,2,101,1,False
+line-2,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-2,Component 2,Packaging,US,EUR,3,102,1,False
+line-3,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-3,Component 3,Hardware,US,EUR,4,103,1,False
+line-4,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-4,Component 4,Office,US,EUR,5,104,1,False
+line-5,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-5,Component 5,Packaging,US,EUR,1,105,1,False
+line-6,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-6,Component 6,Hardware,US,EUR,2,106,1,False
+line-7,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-7,Component 7,Office,US,EUR,3,107,1,False
+line-8,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-8,Component 8,Packaging,US,EUR,4,108,1,False
+line-9,invoice-0,supplier-0,Supplier 0,2026-01-01,sku-9,Component 9,Hardware,US,EUR,5,109,1,False
+line-10,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-10,Component 10,Office,US,USD,1,110,1,False
+line-11,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-11,Component 11,Packaging,US,USD,2,111,1,False
+line-12,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-12,Component 12,Hardware,US,USD,3,112,1,False
+line-13,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-13,Component 13,Office,US,USD,4,113,1,False
+line-14,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-14,Component 14,Packaging,US,USD,5,114,1,False
+line-15,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-15,Component 15,Hardware,US,USD,1,115,1,False
+line-16,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-16,Component 16,Office,US,USD,2,116,1,False
+line-17,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-17,Component 17,Packaging,US,USD,3,117,1,False
+line-18,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-18,Component 18,Hardware,US,USD,4,118,1,False
+line-19,invoice-1,supplier-1,Supplier 1,2026-01-02,sku-19,Component 19,Office,US,USD,5,119,1,False

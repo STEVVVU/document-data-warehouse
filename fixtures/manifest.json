@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "name": "supplier-a",
+      "path": "supplier-a.csv",
+      "kind": "csv"
+    },
+    {
+      "name": "supplier-1",
+      "path": "supplier-1.json",
+      "kind": "json"
+    },
+    {
+      "name": "supplier-2",
+      "path": "supplier-2.json",
+      "kind": "json"
+    },
+    {
+      "name": "document-d",
+      "path": "invoice.txt",
+      "kind": "document",
+      "mime_type": "text/plain",
+      "fixture_response": "captured-extraction.json"
+    }
+  ]
+}

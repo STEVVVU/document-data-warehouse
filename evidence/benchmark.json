@@ -1,0 +1,790 @@
+{
+  "claim": "Compare local full and incremental refresh with identical raw revisions and verify per-currency outputs. No GCP performance claim.",
+  "clock": "time.perf_counter, seconds, CLI start through all dbt tests completion",
+  "host": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "logical_cpus": 24,
+    "ram_bytes": 33752997888,
+    "available_ram_start": 12291317760,
+    "cpu_percent_start": 6.8
+  },
+  "versions": [
+    "agate==1.9.1",
+    "annotated-types==0.8.0",
+    "anyio==4.15.1",
+    "attrs==26.1.0",
+    "babel==2.18.0",
+    "certifi==2026.10.23",
+    "cffi==2.1.1",
+    "charset-normalizer==3.5.2",
+    "click==8.5.0",
+    "colorama==0.4.6",
+    "cryptography==50.0.2",
+    "daff==1.4.2",
+    "db-dtypes==1.9.0",
+    "dbt-adapters==1.24.5",
+    "dbt-bigquery==1.12.1",
+    "dbt-common==1.39.0",
+    "dbt-core==1.12.6",
+    "dbt-core-experimental-parser==2.0.8",
+    "dbt-duckdb==1.11.1",
+    "dbt-extractor==0.6.0",
+    "dbt-protos==1.0.615",
+    "deepdiff==8.6.2",
+    "distro==1.9.0",
+    "docstring_parser==0.18.0",
+    "duckdb==2.0.0",
+    "fastjsonschema==2.22.2",
+    "google-api-core==2.43.0",
+    "google-auth==2.62.0",
+    "google-auth-oauthlib==1.5.0",
+    "google-cloud-aiplatform==2.6.0",
+    "google-cloud-bigquery==3.46.2",
+    "google-cloud-core==2.8.0",
+    "google-cloud-dataproc==5.32.0",
+    "google-cloud-resource-manager==1.19.0",
+    "google-cloud-storage==3.1.1",
+    "google-crc32c==1.9.0",
+    "google-genai==2.33.0",
+    "google-resumable-media==2.11.0",
+    "googleapis-common-protos==1.76.0",
+    "grpc-google-iam-v1==0.14.6",
+    "grpcio==1.85.0",
+    "grpcio-status==1.85.0",
+    "h11==0.16.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "idna==3.20",
+    "importlib_metadata==10.1.0",
+    "iniconfig==2.3.1",
+    "isodate==0.7.2",
+    "Jinja2==3.1.6",
+    "jsonschema==4.26.0",
+    "jsonschema-specifications==2025.9.1",
+    "jupyter_core==5.9.1",
+    "leather==0.4.1",
+    "MarkupSafe==3.0.4",
+    "mashumaro==3.17",
+    "metricflow==0.213.0",
+    "more-itertools==10.8.0",
+    "msgpack==1.2.4",
+    "nbformat==5.11.1",
+    "networkx==3.6.1",
+    "numpy==2.4.6",
+    "oauthlib==4.0.0",
+    "opentelemetry-api==1.45.1",
+    "orderly-set==5.5.0",
+    "packaging==26.3",
+    "pandas==3.1.0",
+    "pandas-gbq==0.35.3",
+    "parsedatetime==2.6",
+    "pathspec==1.0.4",
+    "platformdirs==4.13.6",
+    "pluggy==1.7.0",
+    "proto-plus==1.29.0",
+    "protobuf==6.33.6",
+    "psutil==7.2.2",
+    "pyarrow==26.0.0",
+    "pyasn1==0.6.5",
+    "pyasn1_modules==0.4.2",
+    "pycparser==3.12",
+    "pydantic==2.14.1",
+    "pydantic_core==2.50.1",
+    "pydata-google-auth==1.9.1",
+    "Pygments==2.21.0",
+    "pytest==9.2.0",
+    "python-dateutil==2.9.0.post0",
+    "python-dotenv==1.2.4",
+    "python-slugify==9.1.3",
+    "pytimeparse==1.1.10",
+    "pytz==2026.5",
+    "PyYAML==6.0.3",
+    "RapidFuzz==3.14.6",
+    "referencing==0.37.0",
+    "requests==2.34.2",
+    "requests-oauthlib==2.0.0",
+    "rpds-py==2026.9.1",
+    "ruff==0.17.3",
+    "six==1.17.0",
+    "sniffio==1.3.1",
+    "snowplow-tracker==1.1.0",
+    "sqlglot==30.25.0",
+    "sqlparse==0.6.0",
+    "tabulate==0.10.0",
+    "tenacity==9.1.4",
+    "text-unidecode==1.3",
+    "traitlets==5.16.1",
+    "typing-inspection==0.4.4",
+    "typing_extensions==4.16.0",
+    "tzdata==2026.5",
+    "urllib3==2.8.0",
+    "websockets==17.3",
+    "zipp==4.1.2"
+  ],
+  "source_sha256": {
+    "warehouse/__init__.py": "2b53ee7945eb53d00c6489141524248eb1be7bf1051c938cdc34bc11966ac596",
+    "warehouse/__main__.py": "75431c84915320c1540de857ea6292667cb6b72decb7ec4ed6e3a8f23698f8c4",
+    "warehouse/build.py": "2ab67d9691ea57bdcd84b841bcef59560a75b208025c7491acc7d5d7694264bf",
+    "warehouse/cloud.py": "b363cf2406e34267a4f69d98997710f3a96a76c1b56e601b6905c70f9a8bdfed",
+    "warehouse/domain.py": "3069689baa98c8b774a80fb1f182074765a06b74e90b2926cab5ce7f979566f0",
+    "warehouse/ingest.py": "f6b82c4f84e49ae2a7b9803d5fbdff037f2baee1565f2cea7ff7a4e0e42da04d",
+    "models/intermediate/int_lines.sql": "9dcba97c75ce7a98db28523ce07cb584a05dbacdf0ba17b944ed1acb13c6b544",
+    "models/marts/category_spend.sql": "4c441a47c2007d9066ee7827eac0dcc2e99cc53ea1a4b9a3ab050429a641747c",
+    "models/marts/country_spend.sql": "3a37e7bc8a0663f98f94b990fc6e44059afe0b326c6ac06cc81a41abea068096",
+    "models/marts/daily_spend.sql": "c4743ad28f312ad68786aaf4be898b4043562bc86b1c6f0c0ed264cd03565a3f",
+    "models/marts/dim_products.sql": "ae2048a3a43782989f99ac95bc39f0a5d6ceeb538804d7d6eeab08d9290e46eb",
+    "models/marts/dim_suppliers.sql": "f1a5abacbe970195e0082d98e92636628266b50234f4925f1a482cc8fe27cc9e",
+    "models/marts/fct_invoice_lines.sql": "3b90b0e7b2d60a86803141a82da6e9be19d6a862bc7a7226c17376684c55a366",
+    "models/marts/fct_invoices.sql": "3f139c232e87e6306da3a1806f86bf8dcb96f794676efc5b6b75b225b665875a",
+    "models/marts/invoice_anomalies.sql": "b6c08faeaa125266f9a9a1b30ed806d01dd4ad9ade3da20c00a38508f044f88b",
+    "models/marts/source_quality.sql": "c670680b5180ffc4e176639c752c343b8a8f6d1e837ee2b71bba6fadc59d4071",
+    "models/marts/supplier_spend.sql": "0d0890e9fef69f2e673304886d423fe9704ca313ff40f0a4d7e95919ec456aae",
+    "models/schema.yml": "3d161a0a637d633f53a791fa241671475cc449d8aa37159141a9775a90f2f44c",
+    "models/staging/sources.yml": "0338a864204a27c583bf87b670886b69f950db185dd99d1657ed87d1a6bc337b",
+    "models/staging/stg_lines.sql": "1ca282787c054c377412a74f0e90549d6d30f53d6f7eb68d8691ca1ddd5529b5",
+    "data_tests/aggregate_totals.sql": "f49e0cf83c3b951d52fedaa3205a69762af241b9b8d58715d6d13910aceb91eb",
+    "data_tests/conflicting_revisions.sql": "bb34efd4fa60c03446fce858e5a163e810ead0f027c524a60d06330de3857d1a",
+    "data_tests/invoice_consistency.sql": "8fd3808c57335002bc20aa383a4e4b6cb5b2fd65d6a2b2e0bdd0ddc0df2b68ab",
+    "scripts/benchmark.py": "c69f113ceaf7da99816dca2a461155da6af7f02da7e7aab6a2ac0f628430e765",
+    "scripts/make_fixture.py": "71e059a6f82cd768b739496df93d810483c9d25ab65d2a77eca20f2702ae2020",
+    "scripts/verify.py": "e7dedd196a747b548b2343f3c146591842654cdfc02ec5a44f06d4872caeb923"
+  },
+  "runs": [
+    {
+      "base_lines": 4000,
+      "side": "full",
+      "repeat": 0,
+      "elapsed_seconds": 4.158574700006284,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "89ee045fff090a00301b60b087826453658a7608f5959525b5e25a0d0fc66260",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "incremental",
+      "repeat": 0,
+      "elapsed_seconds": 4.2123068000073545,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "ee7827a6250239123ecedd80a6e1bd1417b92fa9a43d86c2d65ac4aa6004f594",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "incremental",
+      "repeat": 1,
+      "elapsed_seconds": 4.180018299986841,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "bb6cd079af9b8d7f2229be688a5f5713f8b1c32591cf0af5999211009bb95b16",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "full",
+      "repeat": 1,
+      "elapsed_seconds": 4.16533079999499,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "fa97ab2ec56e03f98f47560e565464fb313f4381171e325839d9a44cdfcb1ff6",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "full",
+      "repeat": 2,
+      "elapsed_seconds": 4.233082499995362,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "9a2d1eed0fbdcb7333a46abc44b79d2d600c55a9861047b7bc55901ad8c79b42",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "incremental",
+      "repeat": 2,
+      "elapsed_seconds": 4.1697268999996595,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "b00fb22ed8f24df3f7577ffadf7a1073a20f85f4be6a6e318d632c8a4991c4bc",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "incremental",
+      "repeat": 3,
+      "elapsed_seconds": 4.384301799989771,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "82d2bfd2279683a517fcb9b50f1008623d21590ac21b773d38f40fd534a7a305",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "full",
+      "repeat": 3,
+      "elapsed_seconds": 4.16052689999924,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "56389668f3dfb405092de2075947e189fbe4a8408ca4e6bbd1e7ae17e482905d",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "full",
+      "repeat": 4,
+      "elapsed_seconds": 4.316017000004649,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "41c7f2b2d8e0b18ce77f9db61f0e38e7a9cc11eb14bb8e14735ac1dc507c0c88",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 4000,
+      "side": "incremental",
+      "repeat": 4,
+      "elapsed_seconds": 4.226553899992723,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "51e457de4dcb2d7e3c742e7878adb84a1c1890f2862e73e653f1e1d4ce7ffee0",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 3960,
+        "raw_revisions": 4440,
+        "spend_by_currency_cents": {
+          "EUR": 2511968,
+          "USD": 4883952
+        }
+      },
+      "oracle_totals": {
+        "EUR": 2511968,
+        "USD": 4883952
+      },
+      "oracle_lines": 3960,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "full",
+      "repeat": 0,
+      "elapsed_seconds": 4.92125399998622,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "c70b3c65f6b9507ff4e5f0a0afa7437fdd174b6c145eba1c665adbcbd558463d",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "incremental",
+      "repeat": 0,
+      "elapsed_seconds": 5.007056500006001,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "f3a26b54c788d91c68a0e4689d3c1c4705a42691f04b15d45dda951566033863",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "incremental",
+      "repeat": 1,
+      "elapsed_seconds": 4.870287800004007,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "255ad109fc180a8d0ada3079dbb2da25f3b7c23a2cc101062b6fd237d3fa1cff",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "full",
+      "repeat": 1,
+      "elapsed_seconds": 4.939584300009301,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "0f2d92dcd7c767aa049e0934d1d5fc14e28045e3bdd6c88830dae420ed913607",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "full",
+      "repeat": 2,
+      "elapsed_seconds": 4.867409400001634,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "15f0aaf57f1bf0694293be7a0051f04384a867f87e2fcbabbdf367041860dbd7",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "incremental",
+      "repeat": 2,
+      "elapsed_seconds": 4.791519299993524,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "fdefe900c024c73888ef7871d1f5b3dab16e0a09eb0b70552e696a841cec1f10",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "incremental",
+      "repeat": 3,
+      "elapsed_seconds": 4.757784899993567,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "cd5e8da9c974f06b0e9daeb6f18ec4a0af0313deab456b7e679156845e9b8513",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "full",
+      "repeat": 3,
+      "elapsed_seconds": 4.983689199987566,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "bf3d162b81961600370eeaa8ba110e959bb337bac8ec0edddfc211f6bb3c2132",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "full",
+      "repeat": 4,
+      "elapsed_seconds": 4.795273099996848,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": true,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "7f26297eed0aacb35dad88bb037d7f794aea23917b6d5cf151cb50daff1ee51a",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    },
+    {
+      "base_lines": 40000,
+      "side": "incremental",
+      "repeat": 4,
+      "elapsed_seconds": 4.758342700020876,
+      "returncode": 0,
+      "observed": {
+        "build": {
+          "full_refresh": false,
+          "mode": "local-duckdb",
+          "models": 12,
+          "nodes": 51,
+          "run_results_sha256": "b3e7b294a8be98f61dde80407797a489d79b5d8d5644194b271752bf84297837",
+          "tests": 39
+        },
+        "currencies": 2,
+        "lines": 39600,
+        "raw_revisions": 44400,
+        "spend_by_currency_cents": {
+          "EUR": 24699728,
+          "USD": 49259472
+        }
+      },
+      "oracle_totals": {
+        "EUR": 24699728,
+        "USD": 49259472
+      },
+      "oracle_lines": 39600,
+      "output_checks_passed": true
+    }
+  ],
+  "cleanup": true,
+  "summary": [
+    {
+      "base_lines": 4000,
+      "side": "full",
+      "repeats": 5,
+      "median_seconds": 4.16533079999499,
+      "min_seconds": 4.158574700006284,
+      "max_seconds": 4.316017000004649
+    },
+    {
+      "base_lines": 4000,
+      "side": "incremental",
+      "repeats": 5,
+      "median_seconds": 4.2123068000073545,
+      "min_seconds": 4.1697268999996595,
+      "max_seconds": 4.384301799989771
+    },
+    {
+      "base_lines": 40000,
+      "side": "full",
+      "repeats": 5,
+      "median_seconds": 4.92125399998622,
+      "min_seconds": 4.795273099996848,
+      "max_seconds": 4.983689199987566
+    },
+    {
+      "base_lines": 40000,
+      "side": "incremental",
+      "repeats": 5,
+      "median_seconds": 4.791519299993524,
+      "min_seconds": 4.757784899993567,
+      "max_seconds": 5.007056500006001
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+Synthetic purchase invoice capture for offline contract testing.
+invoice-0 line-0 Component 0 quantity=1 cents=100
+invoice-0 line-1 Component 1 quantity=2 cents=101
+invoice-0 line-2 Component 2 quantity=3 cents=102
+invoice-0 line-3 Component 3 quantity=4 cents=103
+invoice-0 line-4 Component 4 quantity=5 cents=104
+invoice-0 line-5 Component 5 quantity=1 cents=105
+invoice-0 line-6 Component 6 quantity=2 cents=106
+invoice-0 line-7 Component 7 quantity=3 cents=107
+invoice-0 line-8 Component 8 quantity=4 cents=108
+invoice-0 line-9 Component 9 quantity=5 cents=109
+invoice-1 line-10 Component 10 quantity=1 cents=110
+invoice-1 line-11 Component 11 quantity=2 cents=111
+invoice-1 line-12 Component 12 quantity=3 cents=112
+invoice-1 line-13 Component 13 quantity=4 cents=113
+invoice-1 line-14 Component 14 quantity=5 cents=114
+invoice-1 line-15 Component 15 quantity=1 cents=115
+invoice-1 line-16 Component 16 quantity=2 cents=116
+invoice-1 line-17 Component 17 quantity=3 cents=117
+invoice-1 line-18 Component 18 quantity=4 cents=118
+invoice-1 line-19 Component 19 quantity=5 cents=119

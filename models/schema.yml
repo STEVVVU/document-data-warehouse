@@ -1,0 +1,102 @@
+version: 2
+models:
+  - name: stg_lines
+    columns:
+      - name: record_key
+        data_tests: [not_null]
+      - name: revision
+        data_tests: [not_null]
+      - name: _data_source
+        data_tests: [not_null]
+  - name: int_lines
+    columns:
+      - name: record_key
+        data_tests: [unique, not_null]
+      - name: revision
+        data_tests: [not_null]
+      - name: deleted
+        data_tests: [not_null]
+  - name: fct_invoice_lines
+    columns:
+      - name: record_key
+        data_tests: [unique, not_null]
+      - name: invoice_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_invoices')
+                field: invoice_key
+      - name: supplier_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_suppliers')
+                field: supplier_key
+      - name: product_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_key
+      - name: line_total_cents
+        data_tests: [not_null]
+      - name: currency
+        data_tests: [not_null]
+  - name: fct_invoices
+    columns:
+      - name: invoice_key
+        data_tests: [unique, not_null]
+      - name: supplier_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_suppliers')
+                field: supplier_key
+      - name: total_cents
+        data_tests: [not_null]
+  - name: dim_suppliers
+    columns:
+      - name: supplier_key
+        data_tests: [unique, not_null]
+      - name: supplier_name
+        data_tests: [not_null]
+  - name: dim_products
+    columns:
+      - name: product_key
+        data_tests: [unique, not_null]
+      - name: category
+        data_tests: [not_null]
+  - name: supplier_spend
+    columns:
+      - name: supplier_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_suppliers')
+                field: supplier_key
+      - name: total_cents
+        data_tests: [not_null]
+  - name: daily_spend
+    columns:
+      - name: invoice_date
+        data_tests: [not_null]
+      - name: currency
+        data_tests: [not_null]
+  - name: category_spend
+    columns:
+      - name: category
+        data_tests: [not_null]
+  - name: country_spend
+    columns:
+      - name: country
+        data_tests: [not_null]
+  - name: source_quality
+    columns:
+      - name: _data_source
+        data_tests: [unique, not_null]
+  - name: invoice_anomalies
+    columns:
+      - name: invoice_key
+        data_tests: [unique, not_null]
